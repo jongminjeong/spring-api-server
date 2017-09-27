@@ -29,7 +29,7 @@ public class HomeController {
 
 	    HttpHeaders responseHeaders = new HttpHeaders();
 	    responseHeaders.add("Content-Type", "text/html; charset=UTF-8");
-	    return new ResponseEntity<String>("spring api test", responseHeaders, HttpStatus.OK);
+	    return new ResponseEntity<String>("spring api server", responseHeaders, HttpStatus.OK);
 	}
 	
 }
