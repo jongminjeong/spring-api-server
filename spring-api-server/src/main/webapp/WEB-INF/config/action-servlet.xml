@@ -22,6 +22,30 @@
     <bean class="org.springframework.web.servlet.view.BeanNameViewResolver" p:order="0" />
     <bean id="jsonView" class="org.springframework.web.servlet.view.json.MappingJacksonJsonView" />   
      
+     
+     
+     <bean id="jsonHttpMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" />
+
+<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+
+	<property name="messageConverters">
+
+	  <list>
+
+		<ref bean="jsonHttpMessageConverter"/>
+
+	  </list>
+
+	</property>
+
+</bean>
+
+
+
+     
+     
+     
+     
     <bean
         class="org.springframework.web.servlet.view.UrlBasedViewResolver" p:order="1"
         p:viewClass="org.springframework.web.servlet.view.JstlView"
